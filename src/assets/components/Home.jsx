@@ -23,7 +23,12 @@ const Home = () => {
       buttonText: "Shop Collection",
     },
   ];
-
+const pictures=[
+  {id:1,image:"/images/m1.jpg"},
+  {id:2,image:"/images/m2.jpg"},
+  {id:3,image:"images/m3.jpg"},
+  {id:4,image:"images/m5.jpg"}
+]
   const products = [
     { id: 1, name: "Model 000", color: "Black", price: "$145", img: "/images/s1.jpg" },
     { id: 2, name: "Model 000", color: "Black", price: "$145", img: "/images/s3.jpg" },
@@ -204,46 +209,74 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className='flex gap-8' >
-          <div className='h-auto text-center w-[60rem] rounded-2xl bg-gray-100 relative'>
-          <span className='text-5xl   font-DMSerif'>The Hype is real...</span>
-          <div className="flex">
-            <img src="./images/bag.jpg" className='rounded-2xl w-[32rem] h-[29rem] mt-8 object-contain' alt=""/>
-            <div className='flex-col pr-6 pt-22 pl-4'>
-              <div className="flex ">
-                <div className='text-sm mr-2 pl-8'>borkat u.</div><svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                </svg>
-              </div>
-               <div className='text-3xl mt-4 max-w-200 font-DMSerif leading-8'>These stylishly simple and incredibly comfortable shoes have become such a staoke ub ky dailly wardrobe that Im already buying a second pair.</div>
-            </div>
-           
-          </div>
+     <div className="flex flex-wrap sm:flex-nowrap flex-col lg:flex-row gap-8">
+  {/* Left Card */}
+  <div className="w-full lg:w-2/3 bg-gray-100 rounded-2xl sm:p-6 md:pl-0 text-center">
+    <span className="block text-2xl sm:text-4xl lg:text-5xl font-DMSerif">
+      The Hype is real...
+    </span>
 
-          </div>
-          <div className='h-[34rem] w-[30rem] bg-gray-100'>
-<img src="./images/leg.jpg" alt="" className='transform transition-transform duration-200 hover:scale-110 h-[27rem] w-[30rem]' />
-<div className=' p-4 flex space-x-28 items-center justify-center'>
-<div className=''>
-  <div className='font-semibold mb-1'>Model 2001</div>
-  <div className='text-xs text-gray-500'>Navy</div></div>
-  <button className='bg-lime-300 px-6 py-3 rounded-3xl mt-2 hover:cursor-pointer'>Shop Now</button>
+    <div className="flex flex-col md:flex-row mt-6">
+      {/* Image */}
+      <img
+        src="./images/bag.jpg"
+        alt="Bag"
+        className="rounded-2xl w-2/3 ml-14 md:ml-0 md:w-1/2 h-64 md:h-[29rem] object-fill"
+      />
+
+      {/* Text + Stars */}
+      <div className="flex flex-col px-4 mt-4 md:mt-0 md:pl-8 ">
+        <div className="flex items-center space-x-1">
+          <span className="text-sm">borkat u.</span>
+          {[...Array(5)].map((_, i) => (
+            <svg
+              key={i}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="black"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11.48 3.5a.56.56 0 0 1 1.04 0l2.12 5.11a.56.56 0 0 0 .47.35l5.52.44c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 0 0-.18.56l1.28 5.39a.56.56 0 0 1-.84.61l-4.73-2.88a.56.56 0 0 0-.59 0l-4.72 2.88a.56.56 0 0 1-.84-.61l1.28-5.39a.56.56 0 0 0-.18-.56l-4.2-3.6a.56.56 0 0 1 .32-.99l5.52-.44a.56.56 0 0 0 .47-.35l2.12-5.11Z"
+              />
+            </svg>
+          ))}
+        </div>
+
+        <p className="text-lg sm:text-xl lg:text-2xl font-DMSerif leading-relaxed mt-4">
+          These stylishly simple and incredibly comfortable shoes have become
+          such a staple in my daily wardrobe that I’m already buying a second
+          pair.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Right Card */}
+  <div className="w-full lg:w-1/3 bg-gray-100 rounded-2xl sm:p-4 md:p-0 flex flex-col items-center">
+    <img
+      src="./images/leg.jpg"
+      alt="Leg"
+      className="rounded-2xl h-64 sm:h-80 md:h-[27rem] w-full object-cover transform transition-transform duration-200 hover:scale-110"
+    />
+    <div className="mt-4 flex justify-between items-center w-full px-2 sm:px-6">
+      <div>
+        <div className="font-semibold">Model 2001</div>
+        <div className="text-xs text-gray-500">Navy</div>
+      </div>
+      <button className="bg-lime-300 px-4 sm:px-6 py-2 sm:py-3 rounded-3xl font-medium hover:cursor-pointer">
+        Shop Now
+      </button>
+    </div>
+  </div>
 </div>
 
-          </div>
-          </div>  
+
+ 
       </div>
       <div className="bg-[#03031a] min-h-screen text-white font-sans mt-14">
       {/* Navbar */}
@@ -393,7 +426,7 @@ const Home = () => {
       </div>
     </div>
       <div className="px-4 md:px-10 lg:px-40">
-<div className="bg-gray-50 min-h-screen px-6 md:px-16 py-12 space-y-12">
+<div className="bg-gray-50 min-h-screen  py-12 space-y-12">
       {/* Card 1 - SOPA */}
       <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden hover:shadow-lg  hover:scale-105 transition-transform duration-200">
         {/* Left Image */}
@@ -460,6 +493,22 @@ const Home = () => {
         </div>
       </div>
     </div>
+<div className='mt-10'>
+  <div className='text-center'>
+    <span className='font-DMSerif text-4xl font-semibold tracking-widest '> SOPA in Everyday </span>
+    <div className='text-sm mt-3 '>@sopa</div>
+  </div>
+  
+</div>
+<div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 mt-8'>
+{
+  pictures.map((pict)=>(
+    <img key={pict.id} src={pict.image} alt="" className='h-85 w-80 rounded-2xl' />
+  ))
+}
+
+</div>
+
 
       </div>
     </div>
