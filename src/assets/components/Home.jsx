@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
+import Navbar from './Navbar';
 
 const Home = () => {
+  const[Isoopen,setopen]=useState(false);
+    
   const slides = [
     {
       image: "/images/slide1.jpg",
@@ -63,60 +67,8 @@ const pictures=[
 
       <div className="px-4 md:px-10 lg:px-40">
         {/* Navbar */}
-        <div className="pt-4 flex items-center justify-between flex-wrap gap-4">
-          <span className="font-DMSerif text-2xl tracking-widest">SOPA</span>
-          <div className="flex space-x-4 text-sm md:space-x-6">
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">Accessories</a>
-            <a href="#">About</a>
-            <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
-              Shoe Finder Quiz
-            </button>
-          </div>
-          <div className="flex space-x-3">
-            <span className="hidden sm:block">Support</span>
-            {/* user icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 
-                20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 
-                12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-              />
-            </svg>
-            {/* bag icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 
-                1.263 12c.07.665-.45 1.243-1.119 
-                1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 
-                1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 
-                1.119 1.007ZM8.625 10.5a.375.375 0 1 
-                1-.75 0 .375.375 0 0 1 .75 0Zm7.5 
-                0a.375.375 0 1 1-.75 0 .375.375 0 0 
-                1 .75 0Z"
-              />
-            </svg>
-          </div>
-        </div>
+        
+         <Navbar />
 
         {/* Slideshow */}
         <div className="relative overflow-hidden h-[400px] md:h-[600px] rounded-2xl mt-8 md:mt-12">
@@ -261,7 +213,7 @@ const pictures=[
     <img
       src="./images/leg.jpg"
       alt="Leg"
-      className="rounded-2xl h-64 sm:h-80 md:h-[27rem] w-full object-cover transform transition-transform duration-200 hover:scale-110"
+      className="rounded-2xl h-64 sm:h-80 md:h-[27rem] w-full object-cover transform transition-transform duration-200 "
     />
     <div className="mt-4 flex justify-between items-center w-full px-2 sm:px-6">
       <div>
@@ -304,9 +256,9 @@ const pictures=[
       <div className="px-4 md:px-14">
         <h2 className="text-xl font-semibold mb-6">Explore Model 001</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 lg:auto-rows-auto gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 lg:auto-rows-auto sm:gap-8">
           {/* Card 1 */}
-          <div className="bg-white  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 shadow-md col-span-3 overflow-hidden h-[30rem] flex flex-col"  >
+          <div className="bg-white  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 mb-3 shadow-md col-span-3 overflow-hidden h-[30rem] flex flex-col"  >
               <div className="flex-1 overflow-hidden">
     <img
       src="/images/sh3.jpg"
@@ -323,7 +275,7 @@ const pictures=[
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 shadow-md col-span-4 row-span-2 flex flex-col h-[62rem]">
+          <div className="bg-white mb-3  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 shadow-md col-span-4 row-span-2 flex flex-col h-[62rem]">
             <div className='flex-1 overflow-hidden'>
               <img
                 src="/images/sh1.jpg"
@@ -366,9 +318,9 @@ const pictures=[
       <div className="px-4 md:px-14 lg:py-10">
         <h2 className="text-xl font-semibold mb-6">Accessories</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 lg:auto-rows-auto gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 lg:auto-rows-auto sm:gap-8">
           {/* Card 1 */}
-           <div className="bg-white text-black rounded-xl p-4 shadow-md col-span-4 row-span-2 flex flex-col h-[62rem]  transition-transform duration-200 hover:scale-105">
+           <div className="bg-white text-black rounded-xl p-4 shadow-md col-span-4 row-span-2 flex flex-col h-[62rem] mb-3 transition-transform duration-200 hover:scale-105">
             <div className='flex-1 overflow-hidden'>
               <img
                 src="/images/sh8.jpg"
@@ -385,7 +337,7 @@ const pictures=[
                <button className='bg-lime-300 px-6 py-3 rounded-3xl mt-2 hover:cursor-pointer'>Shop Now</button>
             </div>
           </div>
-          <div className="bg-white  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 shadow-md col-span-3 overflow-hidden h-[30rem] flex flex-col"  >
+          <div className="bg-white  transition-transform mb-3 duration-200 hover:scale-105 text-black rounded-xl p-4 shadow-md col-span-3 overflow-hidden h-[30rem] flex flex-col"  >
               <div className="flex-1 overflow-hidden">
     <img
       src="/images/sh7.jpg"
@@ -405,7 +357,7 @@ const pictures=[
          
 
           {/* Big Card */}
-          <div className="bg-white text-black rounded-xl p-6 shadow-md flex flex-col justify-between col-span-3 h-[30rem] transition-transform duration-200 hover:scale-105">
+          <div className="bg-white mb-3 text-black rounded-xl p-6 shadow-md flex flex-col justify-between col-span-3 h-[30rem] transition-transform duration-200 hover:scale-105">
             <div className='flex-1 overflow-hidden'>
               <img
                 src="/images/sh6.jpg"
@@ -428,7 +380,7 @@ const pictures=[
       <div className="px-4 md:px-10 lg:px-40">
 <div className="bg-gray-50 min-h-screen  py-12 space-y-12">
       {/* Card 1 - SOPA */}
-      <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden hover:shadow-lg  hover:scale-105 transition-transform duration-200">
+      <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden hover:shadow-lg  transition-transform duration-200">
         {/* Left Image */}
         <div className="flex items-center justify-center bg-white">
           <img
@@ -463,7 +415,7 @@ const pictures=[
       </div>
 
       {/* Card 2 - Humans of New Youk */}
-      <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden  hover:shadow-lg  hover:scale-105 transition-transform duration-200">
+      <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden  hover:shadow-lg   transition-transform duration-200">
         {/* Left Image */}
         <div className="flex items-center justify-center bg-white">
           <img
@@ -500,10 +452,10 @@ const pictures=[
   </div>
   
 </div>
-<div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 mt-8'>
+<div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-4 mt-8  sm:ml-0'>
 {
   pictures.map((pict)=>(
-    <img key={pict.id} src={pict.image} alt="" className='h-85 w-80 rounded-2xl' />
+    <img key={pict.id} src={pict.image} alt="" className='h-85 md:w-80 w-full rounded-2xl mb-3 hover:scale-105 transition-transform duration-200' />
   ))
 }
 
@@ -511,6 +463,82 @@ const pictures=[
 
 
       </div>
+       <footer className="bg-[#0b0b22] text-white py-12 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+
+        {/* Left Section - Logo & Newsletter */}
+        <div>
+          <h2 className="text-2xl font-bold flex items-center gap-2 font-DMSerif tracking-widest">
+            <span className="bg-white w-6 h-6 rounded-full inline-block font-DMSerif"></span>
+            SOPA
+          </h2>
+          <p className="mt-4 text-sm text-gray-300">
+            Stay informed about Sopa with our latest releases and founder news.
+          </p>
+          <div className="mt-4">
+            <input
+              type="email"
+              placeholder="Enter email here for updates"
+              className="w-full md:w-60 px-6 py-2 bg-transparent border text-white placeholder:text-white border-gray-100 rounded-4xl text-sm focus:outline-none focus:border-white"
+            />
+          </div>
+        </div>
+
+        {/* Products */}
+        <div>
+          <h3 className="font-semibold mb-4">Products</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li>Model 000</li>
+            <li>Model 001</li>
+            <li>Laces</li>
+            <li>Masks</li>
+            <li>No-show Socks</li>
+            <li>Crew Socks</li>
+            <li>Gift Cards</li>
+          </ul>
+        </div>
+
+        {/* Support */}
+        <div>
+          <h3 className="font-semibold mb-4">Support</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li>Help Center</li>
+            <li>FAQs</li>
+            <li>Order</li>
+            <li>Order Status</li>
+            <li>Returns & Exchanges</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+        {/* Everything Else */}
+        <div>
+          <h3 className="font-semibold mb-4">Everything Else</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li>Community</li>
+            <li>Why Sopa</li>
+            <li>About</li>
+            <li>Discount Program</li>
+            <li>Sopa Blog</li>
+            <li>Sopa Ambassadors</li>
+          </ul>
+          </div>
+
+          {/* Social Icons */}
+        <div className="mt-6 text-xl flex flex-col gap-4">
+  <a href="#" className="flex items-center gap-2 hover:text-gray-400">
+    <FaTwitter /> Twitter
+  </a>
+  <a href="#" className="flex items-center gap-2 hover:text-gray-400">
+    <FaInstagram /> Instagram
+  </a>
+  <a href="#" className="flex items-center gap-2 hover:text-gray-400">
+    <FaFacebook /> Facebook
+  </a>
+</div>
+
+      </div>
+    </footer>
     </div>
   );
 };
