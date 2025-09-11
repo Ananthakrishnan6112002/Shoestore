@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center">
       {/* Logo */}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-2 hover:cursor-pointer" onClick={() => navigate("/")}>
         <img src="/images/logo.png" alt="SOPA Logo" className="h-8" />
         <span className="font-DMSerif text-2xl tracking-widest">SOPA</span>
       </div>

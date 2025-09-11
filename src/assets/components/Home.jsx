@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 import Navbar from './Navbar';
-
+import Addtobag from './Addtobag';
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const[Isoopen,setopen]=useState(false);
+   const navigate = useNavigate();
+
     
   const slides = [
     {
@@ -11,17 +14,17 @@ const Home = () => {
       text: "Step Inside, for Comfort and magic await you.",
       buttonText: "Shop Now",
     },
-    {
+    {id:4,
       image: "/images/slide2.jpg",
       text: "Find the best shoes for every occasion.",
       buttonText: "Explore",
     },
-    {
+    { 
       image: "/images/slide3.jpg",
       text: "Walk with comfort, walk with style.",
       buttonText: "Discover",
     },
-    {
+    { id:3,
       image: "/images/slide4.jpg",
       text: "New arrivals are waiting for you.",
       buttonText: "Shop Collection",
@@ -85,7 +88,7 @@ const pictures=[
                 <span className="font-DMSerif left-5 md:left-10 top-40 md:top-56 text-white text-2xl md:text-6xl max-w-xs md:max-w-md absolute">
                   {slide.text}
                 </span>
-                <button className="bg-lime-300 px-6 md:px-10 py-2 md:py-3 rounded-3xl left-5 md:left-10 bottom-10 md:bottom-20 absolute">
+                <button onClick={()=> navigate(`/add-to-bag/${slide.id}`)} className="bg-lime-300 px-6 md:px-10 py-2 md:py-3 rounded-3xl left-5 md:left-10 bottom-10 md:bottom-20 absolute hover:cursor-pointer">
                   {slide.buttonText}
                 </button>
               </div>
@@ -258,7 +261,7 @@ const pictures=[
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 lg:auto-rows-auto sm:gap-8">
           {/* Card 1 */}
-          <div className="bg-white  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 mb-3 shadow-md col-span-3 overflow-hidden h-[30rem] flex flex-col"  >
+          <div onClick={() => navigate(`/add-to-bag/2`)} className="bg-white  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 mb-3 shadow-md col-span-3 overflow-hidden h-[30rem] flex flex-col"  >
               <div className="flex-1 overflow-hidden">
     <img
       src="/images/sh3.jpg"
@@ -289,7 +292,7 @@ const pictures=[
                 <div className='text-xs text-gray-500'>Navy</div>
               </div>
               
-               <button className='bg-lime-300 px-6 py-3 rounded-3xl mt-2 hover:cursor-pointer'>Shop Now</button>
+               <button className='bg-lime-300 px-6 py-3 rounded-3xl mt-2 hover:cursor-pointer' onClick={() => navigate(`/add-to-bag/1`)}>Shop Now</button>
             </div>
           </div>
 
