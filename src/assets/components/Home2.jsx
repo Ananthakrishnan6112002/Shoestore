@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { TbBackground } from 'react-icons/tb';
 
 const Home = () => {
 const slides=[
@@ -15,26 +16,16 @@ const slides=[
 
 
 ]
-
-const [currentIndex,getindex]=useState(0);
+const[currentindex,setindex]=useState(0)
 useEffect(() => {
-const interval=setInterval(() => {
-    getindex((prev)=>
-    prev===slides.length-1?0:prev+1);
-}, 1000);
+  const Interval=setInterval(() => {
+    setindex((prevIndex)=>prevIndex===slides.length -1 ? 0 :prevIndex + 1);
+  }, 3000);
 
-  return () => {
-    clearInterval(interval)
-  }
-}, [slides.length])
-
-
-
-
-
- 
-
-
+  return () => 
+    clearInterval(Interval);
+  
+}, []);
 
   return (
     <div>
@@ -102,31 +93,21 @@ const interval=setInterval(() => {
 
         {/* Slideshow */}
       <div className="relative overflow-hidden h-[600px] rounded-2xl mt-[3rem]">
-  <div
-    className="flex transition-transform duration-700 ease-in-out"
-    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-  >
-    {slides.map((slide, index) => (
-      <div
-        key={index}
-        className="min-w-full h-[600px] bg-cover bg-center relative"
-        style={{ backgroundImage: `url(${slide.image})` }}
-      >
-        <span className="font-DMSerif left-10 top-56 text-white text-6xl max-w-md absolute">
-          {slide.Text}
-        </span>
-        {index === 0 || index===1 ? (
-          <button className="bg-lime-300 px-10 py-3 rounded-3xl left-10 bottom-30 absolute">
-            {slide.buttonText}
-          </button>
-        ) : (
-          <button className="bg-lime-300 px-10 py-3 rounded-3xl left-10 top-106 absolute">
-            {slide.buttonText}
-          </button>
-        )}
-      </div>
-    ))}
-  </div>
+<div className="flex transition-transform duration-700 ease-in-out"
+style={{transform:`translateX(-${currentindex * 100}%)`}}>
+{
+  slides.map((slide,index)=>(
+    <div  key={index} className=' min-w-full h-[600px] bg-cover bg-center' style={{backgroundImage:`url(${slide.image})`}}>
+
+
+
+    </div>
+  ))
+}
+
+
+
+</div>
 
   {/* Slider dots */}
   <div className="absolute bottom-5 left-0 right-0 flex justify-center space-x-2">
@@ -134,9 +115,9 @@ const interval=setInterval(() => {
       <span
         key={index}
         className={`h-3 w-3 rounded-full cursor-pointer transition-colors duration-300 ${
-          currentIndex === index ? "bg-lime-400" : "bg-gray-300"
+          currentindex === index ? "bg-lime-400" : "bg-gray-300"
         }`}
-        onClick={() =>getindex(index)}
+        onClick={() =>setindex(index)}
       ></span>
     ))}
   </div>

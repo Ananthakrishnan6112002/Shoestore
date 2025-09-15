@@ -3,9 +3,10 @@ import Navbar from './Navbar'
 import { FaStar } from "react-icons/fa";
 import { useState } from 'react'
 import { useParams } from "react-router-dom";
-
-
+import Slideshow from './Slideshow';
+import Rating from './Rating';
 import viteLogo from '/vite.svg'
+import Footer from './Footer';
 
 
 
@@ -132,7 +133,72 @@ const Addtobag = ({products}) => {
                   ))}
               </div>
           </div>
-      </div></>
+          </div>
+           <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Top Left */}
+      {
+        product.soles.map((sole,index)=>(
+<div key="index">
+    <div className="flex flex-col justify-center items-center text-center md:text-left ">
+            <img
+              src={sole.img}
+              alt="Shoe sole"
+              className="w-[60rem] rounded-lg object-cover"
+            />
+            <p className="mt-2 text-sm md:text-base">
+             {sole.text}
+            </p>
+          </div>
+      
+
+</div>
+
+        ))
+      }
+      </div>
+      <div className='max-w-7xl mx-auto'>
+          {
+            product.sole2.map((sole,index)=>(
+          <div key="index">
+              <div className="flex flex-col justify-center items-center text-center md:text-left ">
+                <img
+                  src={sole.img2}
+                  alt="Shoe sole"
+                  className="w-full rounded-lg object-fit h-[10rem]"
+                />
+                <p className="mt-2 text-sm md:text-base">
+                 {sole.text2}
+                </p>
+              </div>
+          
+          
+          </div>
+            ))
+          }
+          <div className="bg-yellow-50 rounded-2xl mt-12 md:mt-20 p-6 md:p-10 text-center">
+          <div className="text-xl md:text-4xl font-DMSerif max-w-3xl mx-auto mb-6">
+            "These are the most thoughtfully designed sneakers on the market."
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-20">
+            <span className="font-DMSerif text-3xl md:text-5xl">VOGUE</span>
+            <span className="font-DMSerif text-gray-500 text-3xl md:text-5xl">esquire</span>
+            <span className="font-medium text-sm md:text-md text-gray-400 leading-4">
+              HUMANS OF NEWYORK
+            </span>
+          </div>
+        </div>
+        <Slideshow />
+      </div>
+      <Rating />
+      
+<Footer />
+      {/* Top Right */}
+     
+
+      {/* Bottom Full Width */}
+      
+    
+      </>
   )
 }
 

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
+
 import Navbar from './Navbar';
 import Addtobag from './Addtobag';
 import { useNavigate } from "react-router-dom";
+import Footer from './Footer';
 const Home = () => {
   const[Isoopen,setopen]=useState(false);
    const navigate = useNavigate();
-
-    
   const slides = [
     {
       image: "/images/slide1.jpg",
@@ -278,12 +277,12 @@ const pictures=[
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white mb-3  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 shadow-md col-span-4 row-span-2 flex flex-col h-[62rem]">
+          <div className="bg-white mb-3  transition-transform duration-200 hover:scale-105 text-black rounded-xl p-4 shadow-md col-span-4 row-span-2 flex flex-col h-[40rem] md:h-[62rem]">
             <div className='flex-1 overflow-hidden'>
               <img
                 src="/images/sh1.jpg"
                 alt="Black Shoe"
-                className=" rounded-md mb-4 object-cover h-[60rem] w-[80rem]"
+                className=" rounded-md mb-4 object-cover h-[40rem] md:h-[60rem] w-[80rem]"
               />
             </div>
             <div className="flex justify-between items-center">
@@ -455,10 +454,10 @@ const pictures=[
   </div>
   
 </div>
-<div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-4 mt-8  sm:ml-0'>
+<div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-4 mt-8 object-cover sm:ml-0'>
 {
   pictures.map((pict)=>(
-    <img key={pict.id} src={pict.image} alt="" className='h-85 md:w-80 w-full rounded-2xl mb-3 hover:scale-105 transition-transform duration-200' />
+    <img key={pict.id} src={pict.image} alt="" className='md:h-85 md:w-80 w-full rounded-2xl mb-3 hover:scale-105 transition-transform duration-200' />
   ))
 }
 
@@ -466,82 +465,7 @@ const pictures=[
 
 
       </div>
-       <footer className="bg-[#0b0b22] text-white py-12 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-
-        {/* Left Section - Logo & Newsletter */}
-        <div>
-          <h2 className="text-2xl font-bold flex items-center gap-2 font-DMSerif tracking-widest">
-            <span className="bg-white w-6 h-6 rounded-full inline-block font-DMSerif"></span>
-            SOPA
-          </h2>
-          <p className="mt-4 text-sm text-gray-300">
-            Stay informed about Sopa with our latest releases and founder news.
-          </p>
-          <div className="mt-4">
-            <input
-              type="email"
-              placeholder="Enter email here for updates"
-              className="w-full md:w-60 px-6 py-2 bg-transparent border text-white placeholder:text-white border-gray-100 rounded-4xl text-sm focus:outline-none focus:border-white"
-            />
-          </div>
-        </div>
-
-        {/* Products */}
-        <div>
-          <h3 className="font-semibold mb-4">Products</h3>
-          <ul className="space-y-2 text-gray-300 text-sm">
-            <li>Model 000</li>
-            <li>Model 001</li>
-            <li>Laces</li>
-            <li>Masks</li>
-            <li>No-show Socks</li>
-            <li>Crew Socks</li>
-            <li>Gift Cards</li>
-          </ul>
-        </div>
-
-        {/* Support */}
-        <div>
-          <h3 className="font-semibold mb-4">Support</h3>
-          <ul className="space-y-2 text-gray-300 text-sm">
-            <li>Help Center</li>
-            <li>FAQs</li>
-            <li>Order</li>
-            <li>Order Status</li>
-            <li>Returns & Exchanges</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-
-        {/* Everything Else */}
-        <div>
-          <h3 className="font-semibold mb-4">Everything Else</h3>
-          <ul className="space-y-2 text-gray-300 text-sm">
-            <li>Community</li>
-            <li>Why Sopa</li>
-            <li>About</li>
-            <li>Discount Program</li>
-            <li>Sopa Blog</li>
-            <li>Sopa Ambassadors</li>
-          </ul>
-          </div>
-
-          {/* Social Icons */}
-        <div className="mt-6 text-xl flex flex-col gap-4">
-  <a href="#" className="flex items-center gap-2 hover:text-gray-400">
-    <FaTwitter /> Twitter
-  </a>
-  <a href="#" className="flex items-center gap-2 hover:text-gray-400">
-    <FaInstagram /> Instagram
-  </a>
-  <a href="#" className="flex items-center gap-2 hover:text-gray-400">
-    <FaFacebook /> Facebook
-  </a>
-</div>
-
-      </div>
-    </footer>
+      <Footer />
     </div>
   );
 };
