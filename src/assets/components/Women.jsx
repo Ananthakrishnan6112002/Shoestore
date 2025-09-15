@@ -3,11 +3,11 @@ import React from "react";
 const Women = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full z-50 flex justify-center items-start  bg-opacity-50 transition-opacity duration-500
+      className={`fixed top-0 left-0 w-full max-w-5xl md:max-w-full h-full z-50 flex justify-center items-start  bg-opacity-50 transition-opacity duration-500
         ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
     >
       <div
-        className={`bg-gray-50 mt-16 py-12 w-full px-120 rounded-lg transform transition-transform duration-500
+        className={`bg-gray-50 mt-16 py-12 w-full px-6 md:px-12 rounded-lg transform transition-transform duration-500
           ${isOpen ? "translate-y-0" : "-translate-y-full"}`}
       >
         <button
@@ -23,7 +23,7 @@ const Women = ({ isOpen, onClose }) => {
             <img
               src="/images/women1.jpg"
               alt="Model 000"
-              className="rounded-lg  object-cover w-50 h-60"
+              className="rounded-lg  object-cover  w-30 h-40 md:w-50 md:h-60"
             />
             <button className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 000
@@ -36,7 +36,7 @@ const Women = ({ isOpen, onClose }) => {
             <img
               src="/images/women2.jpg"
               alt="Model 001"
-              className="rounded-lg w-50 object-cover h-60"
+              className="rounded-lg  object-cover w-30 h-40 md:w-50 md:h-60"
             />
             <button className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 001

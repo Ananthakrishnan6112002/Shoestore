@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 import Men from "./Men";
 import Women from "./Women";
 import Accessories from "./Accessories";
@@ -36,7 +36,7 @@ const Navbar = () => {
           }} className="cursor-pointer hover:text-lime-400">Women</button>
           <button onClick={()=>{setshowacc(prev=>!prev);setShowmen(false);
             setShowwomen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
-          <a href="#">About</a>
+           <Link to="/about" className="cursor-pointer hover:text-lime-400">About</Link>
           <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
             Shoe Finder Quiz
           </button>
@@ -63,26 +63,20 @@ const Navbar = () => {
           </button>
 
           <div className="flex flex-col space-y-6 mt-12 text-lg">
-            <button
-              onClick={() => {
-                setShowmen(prev=>!prev);
-                setIsOpen(false);
-               
-              }}
-            >
-              Men
-            </button>
+            
           <button onClick={() => {setShowmen(prev=>!prev);
           setShowwomen(false);
-            setshowacc(false);}}className="cursor-pointer hover:text-lime-400">Men</button>
+            setshowacc(false);setIsOpen(false);}}className="cursor-pointer hover:text-lime-400">Men</button>
           <button onClick={() => {
             setShowwomen(prev => !prev);
             setShowmen(false);
-            setshowacc(false);
+            setshowacc(false);setIsOpen(false);
           }} className="cursor-pointer hover:text-lime-400">Women</button>
-          <button onClick={()=>{setshowacc(prev=>!prev);setShowmen(false);
-            setShowwomen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
-          <a href="#">About</a>
+          <button onClick={()=>
+          {setshowacc(prev=>!prev);
+            setShowmen(false);
+            setShowwomen(false);setIsOpen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
+          <Link to="/about" >About</Link>
           <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
             Shoe Finder Quiz
           </button>
