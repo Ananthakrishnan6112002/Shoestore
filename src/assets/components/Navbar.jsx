@@ -72,12 +72,20 @@ const Navbar = () => {
             >
               Men
             </button>
-           <button onClick={() => {setIsOpen(false);setShowwomen(prev=>!prev);}}>Women</button>
-            <a href="#" onClick={() => setIsOpen(false)}>Accessories</a>
-            <a href="#" onClick={() => setIsOpen(false)}>About</a>
-            <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
-              Shoe Finder Quiz
-            </button>
+          <button onClick={() => {setShowmen(prev=>!prev);
+          setShowwomen(false);
+            setshowacc(false);}}className="cursor-pointer hover:text-lime-400">Men</button>
+          <button onClick={() => {
+            setShowwomen(prev => !prev);
+            setShowmen(false);
+            setshowacc(false);
+          }} className="cursor-pointer hover:text-lime-400">Women</button>
+          <button onClick={()=>{setshowacc(prev=>!prev);setShowmen(false);
+            setShowwomen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
+          <a href="#">About</a>
+          <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
+            Shoe Finder Quiz
+          </button>
           </div>
         </div>
       </nav>
