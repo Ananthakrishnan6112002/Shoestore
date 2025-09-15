@@ -1,6 +1,6 @@
 import React from "react";
 
-const Men = ({ isOpen, onClose }) => {
+const Accessories = ({ isOpen, onClose }) => {
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full z-50 flex justify-center items-start  bg-opacity-50 transition-opacity duration-500
@@ -21,7 +21,7 @@ const Men = ({ isOpen, onClose }) => {
           {/* Model 000 */}
           <div className="flex flex-col items-center">
             <img
-              src="/images/men1.jpg"
+              src="/images/acc1.jpg"
               alt="Model 000"
               className="rounded-lg  object-cover w-50 h-60"
             />
@@ -34,7 +34,7 @@ const Men = ({ isOpen, onClose }) => {
           {/* Model 001 */}
           <div className="flex flex-col items-center">
             <img
-              src="/images/men2.jpg"
+              src="/images/mask.jpg"
               alt="Model 001"
               className="rounded-lg w-50 object-cover h-60"
             />
@@ -59,4 +59,4 @@ const Men = ({ isOpen, onClose }) => {
   );
 };
 
-export default Men;
+export default Accessories;

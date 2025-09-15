@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Men from "./Men";
+import Women from "./Women";
+import Accessories from "./Accessories";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const [showmen, setShowmen] = useState(false);
+    const [showwomen, setShowwomen] = useState(false);
+    const [showacc,setshowacc]=useState(false);
 
   return (
     <>
-      <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center">
+      <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-60 px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div
           className="flex items-center space-x-2 hover:cursor-pointer"
@@ -22,9 +26,16 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
-          <button onClick={() => setShowmen(true)}>Men</button>
-          <a href="#">Women</a>
-          <a href="#">Accessories</a>
+          <button onClick={() => {setShowmen(prev=>!prev);
+          setShowwomen(false);
+            setshowacc(false);}}className="cursor-pointer hover:text-lime-400">Men</button>
+          <button onClick={() => {
+            setShowwomen(prev => !prev);
+            setShowmen(false);
+            setshowacc(false);
+          }} className="cursor-pointer hover:text-lime-400">Women</button>
+          <button onClick={()=>{setshowacc(prev=>!prev);setShowmen(false);
+            setShowwomen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
           <a href="#">About</a>
           <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
             Shoe Finder Quiz
@@ -54,13 +65,14 @@ const Navbar = () => {
           <div className="flex flex-col space-y-6 mt-12 text-lg">
             <button
               onClick={() => {
-                setShowmen(true);
+                setShowmen(prev=>!prev);
                 setIsOpen(false);
+               
               }}
             >
               Men
             </button>
-            <a href="#" onClick={() => setIsOpen(false)}>Women</a>
+           <button onClick={() => {setIsOpen(false);setShowwomen(prev=>!prev);}}>Women</button>
             <a href="#" onClick={() => setIsOpen(false)}>Accessories</a>
             <a href="#" onClick={() => setIsOpen(false)}>About</a>
             <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
@@ -71,7 +83,11 @@ const Navbar = () => {
       </nav>
 
       {/* Men Overlay */}
-     {showmen && <Men isOpen={showmen} onClose={() => setShowmen(false)} />}
+    <Men isOpen={showmen} onClose={() => setShowmen(false)} />
+      <Women isOpen={showwomen} onClose={()=>setShowwomen(false)}/>
+ <Accessories isOpen={showacc} onClose={()=>setshowacc(false)}/>
+
+       
 
     </>
   );
