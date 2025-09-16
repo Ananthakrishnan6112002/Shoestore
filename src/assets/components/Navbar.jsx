@@ -37,9 +37,7 @@ const Navbar = () => {
           <button onClick={()=>{setshowacc(prev=>!prev);setShowmen(false);
             setShowwomen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
            <Link to="/about" className="cursor-pointer hover:text-lime-400">About</Link>
-          <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
-            Shoe Finder Quiz
-          </button>
+          <Link to="/Quizhome" className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm"> Shoe Finder Quiz</Link>  
         </div>
 
         {/* Hamburger Button (Mobile only) */}
@@ -77,9 +75,8 @@ const Navbar = () => {
             setShowmen(false);
             setShowwomen(false);setIsOpen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
           <Link to="/about" >About</Link>
-          <button className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm">
-            Shoe Finder Quiz
-          </button>
+          
+          <Link to="/Quizhome" className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm"> Shoe Finder Quiz</Link>
           </div>
         </div>
       </nav>

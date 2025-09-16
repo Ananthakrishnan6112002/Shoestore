@@ -7,7 +7,7 @@ const Men = ({ isOpen, onClose }) => {
         ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
     >
       <div
-        className={`bg-gray-50 mt-16 py-12 w-full md:px-12 px-6 rounded-lg transform transition-transform duration-500
+        className={`bg-gray-50 mt-16 py-12 w-full  px-6 rounded-lg transform transition-transform duration-500
           ${isOpen ? "translate-y-0" : "-translate-y-full"}`}
       >
         <button
@@ -17,7 +17,7 @@ const Men = ({ isOpen, onClose }) => {
           ×
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-0 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-0 text-center  mx-auto max-w-md">
           {/* Model 000 */}
           <div className="flex flex-col items-center">
             <img

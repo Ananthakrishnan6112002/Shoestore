@@ -7,6 +7,9 @@ import Home from './assets/components/Home'
 import products from './assets/components/Products'
 import Home2 from './assets/components/Home2'
 import About from "./assets/components/About";
+import Quizhome from "./assets/components/Quizhome"
+import Quiz from "./assets/components/Quiz";
+
 
 
 function App() {
@@ -22,6 +25,8 @@ function App() {
         
         <Route path="/add-to-bag/:id" element={<Addtobag products={products} />} />
         <Route path="/about" element={<About />} />
+        <Route path="/Quizhome" element={<Quizhome />} />
+        <Route path="/quiz" element={<Quiz/>}/>
       </Routes>
     </Router>
     </>

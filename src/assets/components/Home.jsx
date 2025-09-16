@@ -4,11 +4,12 @@ import Navbar from './Navbar';
 import Addtobag from './Addtobag';
 import { useNavigate } from "react-router-dom";
 import Footer from './Footer';
+
 const Home = () => {
   const[Isoopen,setopen]=useState(false);
    const navigate = useNavigate();
   const slides = [
-    {
+    {id:5,
       image: "/images/slide1.jpg",
       text: "Step Inside, for Comfort and magic await you.",
       buttonText: "Shop Now",
@@ -18,7 +19,7 @@ const Home = () => {
       text: "Find the best shoes for every occasion.",
       buttonText: "Explore",
     },
-    { 
+    { id:6,
       image: "/images/slide3.jpg",
       text: "Walk with comfort, walk with style.",
       buttonText: "Discover",

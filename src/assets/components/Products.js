@@ -25,5 +25,19 @@
  sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
 
 },
+  {id: 5, model: "2005", price: "340", images: ["/images/bn3.jpg","/images/bn1.jpg","/images/bn2.jpg","/images/bn4.jpg"],soles: [
+  { img: "/images/sr1.jpg", text: "Stretch laces, so you only have to tie your shoes once." },
+  { img: "/images/sr2.jpg", text: "Experience unparalleled comfort as the lightweight foam midsole cradles your feet with cushioned support." },
+  ],
+ sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
+
+},
+{id: 6, model: "2025", price: "130", images: ["/images/pn3.jpg","/images/pn1.jpg","/images/pn2.jpg","/images/pn4.jpg"],soles: [
+  { img: "/images/sr1.jpg", text: "Stretch laces, so you only have to tie your shoes once." },
+  { img: "/images/sr2.jpg", text: "Experience unparalleled comfort as the lightweight foam midsole cradles your feet with cushioned support." },
+  ],
+ sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
+
+}
       ]
 export default products

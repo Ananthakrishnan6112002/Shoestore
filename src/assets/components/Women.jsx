@@ -17,7 +17,7 @@ const Women = ({ isOpen, onClose }) => {
           ×
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center mx-auto max-w-md">
           {/* Model 000 */}
           <div className="flex flex-col items-center">
             <img
