@@ -42,7 +42,7 @@ getcurrent(0);
     <div>
       <Navbar />
       
-      <div className='flex justify-center items-center h-screen mt-16'>
+      <div className='flex justify-center items-center h-screen '>
         {quizcompleted===false?(
         <div className='w-[45rem] h-[25rem] rounded-4xl border-2 bg-gray-100 '>
          <div>
@@ -71,13 +71,13 @@ quizarray[current].options.map((opt,i)=>(
         </div>
         ):(
         // Quiz completed screen
-        <div>
+        <div className='md:ml-1 ml-3'>
           <h2 className="text-xl font-bold mb-4">Quiz Completed!</h2>
           <p>Your responses:</p>
 
           {
           quizarray.map((opt,i)=>(
-               <div className='mt-8' key={i}><p className='text-2xl mb-2'>{opt.question}</p> 
+               <div className='mt-8' key={i}><p className='md:font-normal font-semibold md:text-2xl mb-2'>{opt.question}</p> 
                 <ul className="list-disc list-inside">
                 <li>{responses[i]?.ans}</li>
                   </ul></div>

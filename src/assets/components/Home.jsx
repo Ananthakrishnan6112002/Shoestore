@@ -5,6 +5,7 @@ import Addtobag from './Addtobag';
 import { useNavigate } from "react-router-dom";
 import Footer from './Footer';
 
+
 const Home = () => {
   const[Isoopen,setopen]=useState(false);
    const navigate = useNavigate();

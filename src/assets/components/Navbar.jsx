@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { LuUser,LuShoppingCart } from "react-icons/lu";
+
 import {Link, useNavigate } from "react-router-dom";
 import Men from "./Men";
 import Women from "./Women";
@@ -37,7 +39,9 @@ const Navbar = () => {
           <button onClick={()=>{setshowacc(prev=>!prev);setShowmen(false);
             setShowwomen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
            <Link to="/about" className="cursor-pointer hover:text-lime-400">About</Link>
-          <Link to="/Quizhome" className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm"> Shoe Finder Quiz</Link>  
+          <Link to="/Quizhome" className="text-lime-400 border  hover:bg-lime-400 hover:text-white border-lime-400 rounded-2xl px-3 py-1 text-sm"> Shoe Finder Quiz</Link>  
+            <Link to="/support" className="cursor-pointer  hover:text-lime-400"><LuUser/></Link>
+              <Link to="/about" className="cursor-pointer hover:text-lime-400"><LuShoppingCart/></Link>
         </div>
 
         {/* Hamburger Button (Mobile only) */}
@@ -74,9 +78,9 @@ const Navbar = () => {
           {setshowacc(prev=>!prev);
             setShowmen(false);
             setShowwomen(false);setIsOpen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
-          <Link to="/about" >About</Link>
+          <Link className="md:ml-0 ml-22" to="/about" >About</Link>
           
-          <Link to="/Quizhome" className="text-lime-400 border border-lime-400 rounded-2xl px-3 py-1 text-sm"> Shoe Finder Quiz</Link>
+          <Link to="/Quizhome" className="text-lime-400 border hover:bg-lime-400 hover:text-white border-lime-400 rounded-2xl px-3 py-1 text-sm md:pl-0 pl-15"> Shoe Finder Quiz</Link>
           </div>
         </div>
       </nav>
