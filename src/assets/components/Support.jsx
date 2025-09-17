@@ -3,8 +3,10 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaSearch,FaFacebookMessenger } from "react-
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Home from "./Home";
+import { useNavigate } from "react-router-dom";
 
 const Support = () => {
+    const navigate=useNavigate();
     const[firstname,setfirstname]=useState("")
     const[lastname,settlastname]=useState("")
     const[firsterr,fisrtnameseterr]=useState("");
@@ -156,7 +158,7 @@ if(field==="phone number"){
                 </p>
               </div>
     
-              <button className="flex items-center gap-2  border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
+              <button onClick={()=>navigate("/")} className="flex items-center gap-2  border border-gray-300 rounded-full px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
                 <FaFacebookMessenger/> Back to shop
               </button>
             </div>

@@ -2,20 +2,28 @@ import React from 'react'
 import Navbar from './Navbar'
 import { FaStar } from "react-icons/fa";
 import { useState } from 'react'
-import { useParams } from "react-router-dom";
+import { useNavigate,useNavigation,useParams } from "react-router-dom";
 import Slideshow from './Slideshow';
 import Rating from './Rating';
 import viteLogo from '/vite.svg'
 import Footer from './Footer';
+import Cart from './Cart';
 
 
 
-const Addtobag = ({products}) => {
+
+const Addtobag = ({products,cart,setcart}) => {
+    const navigate=useNavigate();
       const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
     const [count, setCount] = useState(0)
         const [gender, setGender] = useState("Men");
   const [size, setSize] = useState("US 9");
+  
+  const onbag=(product)=>{
+    setcart([...cart,product])
+    navigate("/cart");
+  }
 
 
   const colors = ["black", "blue", "purple", "green"];
@@ -56,7 +64,7 @@ const Addtobag = ({products}) => {
                       {colors.map((c, i) => (
                           <button
                               key={i}
-                              className={`w-6 h-6 rounded-full border-2 ${c === "black" ? "bg-black border-black" : ""} ${c === "blue" ? "bg-blue-500 border-blue-500" : ""} ${c === "purple" ? "bg-purple-500 border-purple-500" : ""} ${c === "green" ? "bg-green-500 border-green-500" : ""}`}
+                              className={`w-6 h-6 rounded-full border-2 ${c === "black" ? "bg-black border-black" :""} ${c === "blue" ? "bg-blue-500 border-blue-500" : ""} ${c === "purple" ? "bg-purple-500 border-purple-500" : ""} ${c === "green" ? "bg-green-500 border-green-500" : ""}`}
                           ></button>
                       ))}
                   </div>
@@ -94,7 +102,7 @@ const Addtobag = ({products}) => {
               </div>
 
               {/* Add to Bag */}
-              <button className="mt-6 w-full bg-black text-white py-3 rounded-lg text-lg font-medium">
+              <button onClick={()=>onbag(product)} className="mt-6 w-full bg-black text-white py-3 rounded-lg text-lg font-medium">
                   Add to bag ${product.price}
               </button>
 

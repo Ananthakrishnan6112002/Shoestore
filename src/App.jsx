@@ -10,11 +10,12 @@ import About from "./assets/components/About";
 import Quizhome from "./assets/components/Quizhome"
 import Quiz from "./assets/components/Quiz";
 import Support from "./assets/components/Support"
+import Cart from "./assets/components/Cart";
 
 
 function App() {
   
-
+  const [cart, setcart] = useState([]);
   return (
     <>
       
@@ -23,11 +24,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         
-        <Route path="/add-to-bag/:id" element={<Addtobag products={products} />} />
+        <Route path="/add-to-bag/:id" element={<Addtobag products={products}cart={cart} setcart={setcart} />} />
         <Route path="/about" element={<About />} />
         <Route path="/Quizhome" element={<Quizhome />} />
         <Route path="/quiz" element={<Quiz/>}/>
         <Route path="/support" element={<Support/>}/>
+        <Route path="/cart" element={<Cart cart={cart} />}/>
       </Routes>
     </Router>
     </>
