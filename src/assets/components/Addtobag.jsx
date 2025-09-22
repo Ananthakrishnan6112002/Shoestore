@@ -1,28 +1,33 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { FaStar } from "react-icons/fa";
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate,useNavigation,useParams } from "react-router-dom";
 import Slideshow from './Slideshow';
 import Rating from './Rating';
 import viteLogo from '/vite.svg'
 import Footer from './Footer';
 import Cart from './Cart';
+import { CartContext } from "./CartContext"; //
 
 
 
 
-const Addtobag = ({products,cart,setcart}) => {
+
+const Addtobag = ({products}) => {
     const navigate=useNavigate();
       const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
     const [count, setCount] = useState(0)
+    const { addToCart } = useContext(CartContext); 
         const [gender, setGender] = useState("Men");
   const [size, setSize] = useState("US 9");
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
   
   const onbag=(product)=>{
-    setcart([...cart,product])
-    navigate("/cart");
+      addToCart(product); //
+   setIsCartOpen(true); //
   }
 
 
@@ -105,6 +110,8 @@ const Addtobag = ({products,cart,setcart}) => {
               <button onClick={()=>onbag(product)} className="mt-6 w-full bg-black text-white py-3 rounded-lg text-lg font-medium">
                   Add to bag ${product.price}
               </button>
+              
+    <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
 
               <p className="text-sm text-gray-500 mt-2">
                   4 payments of $36.25 using Shop Pay or afterpay
