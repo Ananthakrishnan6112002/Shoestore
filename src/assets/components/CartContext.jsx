@@ -1,11 +1,25 @@
 // CartContext.js
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  useEffect(() => {
+    const storedcart=localStorage.getItem("cart");
+    if(storedcart){
+      setCart(JSON.parse(storedcart))
+    }
+  
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("cart",JSON.stringify(cart))
+  
+  }, [cart])
+  
+  
   // Add item (with quantity handling)
  const addToCart = (item) => {
   setCart((prevCart) => {

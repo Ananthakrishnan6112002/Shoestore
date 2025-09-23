@@ -32,12 +32,13 @@ const Cart = ({isOpen,onClose}) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-1/3 max-w-5xl md:max-w-full h-full z-50 flex  justify-center items-start  bg-opacity-50 transition-opacity duration-500
+      className={`fixed top-0 right-0 w-1/3 max-w-5xl border-l-green-300
+         border-l-2 md:max-w-full h-full z-50 flex  justify-center items-start  bg-opacity-50 transition-opacity duration-500
         ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
     >
       <div
         className={`bg-gray-50 mt-16 py-12 w-full h-full px-6 rounded-lg transform transition-transform duration-500
-          ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+          ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       > <button
           className="absolute top-4 right-6 text-2xl font-bold"
           onClick={onClose}

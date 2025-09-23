@@ -25,30 +25,33 @@ const Navbar = () => {
           onClick={() => navigate("/")}
         >
           <img src="/images/logo.png" alt="SOPA Logo" className="h-8" />
-          <span className="font-DMSerif text-2xl tracking-widest">SOPA</span>
+          <span className="font-DMSerif text-xl md:text-3xl tracking-widest">SOPA</span>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
           
             <button onClick={() => {setShowmen(prev=>!prev);
+             setshowcart(false);
             setShowwomen(false);
               setshowacc(false);}}className="cursor-pointer hover:text-lime-400">Men</button>
             <button onClick={() => {
               setShowwomen(prev => !prev);
+               setshowcart(false);
               setShowmen(false);
               setshowacc(false);
             }} className="cursor-pointer hover:text-lime-400">Women</button>
-            <button onClick={()=>{setshowacc(prev=>!prev);setShowmen(false);
+            <button onClick={()=>{setshowacc(prev=>!prev);setShowmen(false); setshowcart(false);
               setShowwomen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
              <Link to="/about" className="cursor-pointer hover:text-lime-400">About</Link>
             <Link to="/Quizhome" className="text-lime-400 border  hover:bg-lime-400 hover:text-white border-lime-400 rounded-2xl px-3 py-1 text-sm"> Shoe Finder Quiz</Link>
           </div>
           <div className="flex items-center space-x-6 ">
              <Link to="/support" className="cursor-pointer  hover:text-lime-400">Support</Link>
-            <Link to="/support" className="cursor-pointer  hover:text-lime-400"><LuUser/></Link>
+            <Link to="/login" className="cursor-pointer  hover:text-lime-400"><LuUser/></Link>
              
               <button className="cursor-pointer hover:text-lime-400" onClick={()=>{setshowcart(prev=>!prev);setShowmen(false);
+              setshowacc(false);
             setShowwomen(false)}}><LuShoppingCart/></button>
         </div>
 
@@ -75,15 +78,18 @@ const Navbar = () => {
           <div className="flex flex-col space-y-6 mt-12 text-lg">
             
           <button onClick={() => {setShowmen(prev=>!prev);
+          setshowcart(false);
           setShowwomen(false);
             setshowacc(false);setIsOpen(false);}}className="cursor-pointer hover:text-lime-400">Men</button>
           <button onClick={() => {
             setShowwomen(prev => !prev);
+             setshowcart(false);
             setShowmen(false);
             setshowacc(false);setIsOpen(false);
           }} className="cursor-pointer hover:text-lime-400">Women</button>
           <button onClick={()=>
           {setshowacc(prev=>!prev);
+             setshowcart(false);
             setShowmen(false);
             setShowwomen(false);setIsOpen(false);}} className="cursor-pointer hover:text-lime-400">Accessories</button>
           <Link className="md:ml-0 ml-22" to="/about" >About</Link>
@@ -93,6 +99,7 @@ const Navbar = () => {
               <Link to="/cart" className="cursor-pointer hover:text-lime-400"></Link>
               <button onClick={()=>
           {setshowcart(prev=>!prev);
+            setshowacc(false);
             setShowmen(false);
             setShowwomen(false);setIsOpen(false);}} className="cursor-pointer hover:text-lime-400"><LuShoppingCart/></button>
           </div>

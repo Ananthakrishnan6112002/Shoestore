@@ -13,7 +13,8 @@ import Support from "./assets/components/Support"
 import Cart from "./assets/components/Cart";
 import Navbar from "./assets/components/Navbar";
 import { CartProvider } from "./assets/components/CartContext"; // 👈 import provider
-
+import Login from "./assets/components/Login";
+import Signup from "./assets/components/Signup.jsx";
 function App() {
   return (
     <CartProvider>
@@ -26,6 +27,8 @@ function App() {
           <Route path="/quiz" element={<Quiz/>}/>
           <Route path="/support" element={<Support/>}/>
           <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
     </CartProvider>
