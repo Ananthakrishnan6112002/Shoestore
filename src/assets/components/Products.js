@@ -38,6 +38,46 @@
   ],
  sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
 
+},
+{id: 7, model: "2025", price: "155", images: ["/images/men2.jpg","/images/joy3.jpg","/images/joy2.jpg","/images/joy4.jpg"],soles: [
+  { img: "/images/sr1.jpg", text: "Stretch laces, so you only have to tie your shoes once." },
+  { img: "/images/sr2.jpg", text: "Experience unparalleled comfort as the lightweight foam midsole cradles your feet with cushioned support." },
+  ],
+ sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
+
+},
+{id: 8, model: "2025", price: "432", images: ["/images/men1.jpg","/images/gray1.jpg","/images/gray2.jpg","/images/gray4.jpg"],soles: [
+  { img: "/images/men1.jpg", text: "Stretch laces, so you only have to tie your shoes once." },
+  { img: "/images/gray4.jpg", text: "Experience unparalleled comfort as the lightweight foam midsole cradles your feet with cushioned support." },
+  ],
+ sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
+
+},
+{id: 9, model: "2025", price: "121", images: ["/images/women1.jpg","/images/w1.jpg","/images/w2.jpg","/images/w3.jpg"],soles: [
+  { img: "/images/sr1.jpg", text: "Stretch laces, so you only have to tie your shoes once." },
+  { img: "/images/sr2.jpg", text: "Experience unparalleled comfort as the lightweight foam midsole cradles your feet with cushioned support." },
+  ],
+ sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
+
+},
+{id: 10, model: "2025", price: "40", images: ["/images/women2.jpg","/images/w1.jpg","/images/w2.jpg","/images/w3.jpg"],soles: [
+  { img: "/images/women1.jpg", text: "Stretch laces, so you only have to tie your shoes once." },
+  { img: "/images/women1.jpg", text: "Experience unparalleled comfort as the lightweight foam midsole cradles your feet with cushioned support." },
+  ],
+ sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
+
+},{id: 12, model: "2025", price: "40", images: ["/images/mask2.jpg","/images/mask1.jpg","/images/mask2.jpg","/images/mask3.jpg"],soles: [
+  { img: "/images/women1.jpg", text: "Stretch laces, so you only have to tie your shoes once." },
+  { img: "/images/women1.jpg", text: "Experience unparalleled comfort as the lightweight foam midsole cradles your feet with cushioned support." },
+  ],
+ sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
+
 }
-      ]
+     ,{id: 11, model: "2025", price: "40", images: ["/images/a2.jpg","/images/a4.jpg","/images/a3.jpg","/images/a1.jpg"],soles: [
+  { img: "/images/mask.jpg", text: "Stretch laces, so you only have to tie your shoes once." },
+  { img: "/images/mask1.jpg", text: "Experience unparalleled comfort as the lightweight foam midsole cradles your feet with cushioned support." },
+  ],
+ sole2:[ { img2: "/images/sr3.jpg", text2: "Stay odor-free with antimicrobial copper lining that kills bacteria." }]
+
+} ]
 export default products

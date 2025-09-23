@@ -1,6 +1,8 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Men = ({ isOpen, onClose }) => {
+  const navigate=useNavigate();
   return (
     <div
       className={`fixed top-0 left-0 w-full max-w-5xl md:max-w-full h-full z-50 flex  justify-center items-start  bg-opacity-50 transition-opacity duration-500
@@ -25,7 +27,7 @@ const Men = ({ isOpen, onClose }) => {
               alt="Model 000"
               className="rounded-lg  object-cover w-30 h-40 md:w-50 md:h-60"
             />
-            <button className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
+            <button onClick={()=>{navigate(`/add-to-bag/8`);onClose()}} className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 000
             </button>
             <p className="mt-2 text-gray-800 font-medium">Cushiony Comfort</p>
@@ -38,7 +40,7 @@ const Men = ({ isOpen, onClose }) => {
               alt="Model 001"
               className="rounded-lg  object-cover w-30 h-40 md:w-50 md:h-60"
             />
-            <button className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
+            <button onClick={()=>{navigate(`/add-to-bag/7`); onClose()}} className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 001
             </button>
             <p className="mt-2 text-gray-800 font-medium">Supportive & Durable</p>
@@ -47,12 +49,12 @@ const Men = ({ isOpen, onClose }) => {
 
         <div className="text-center mt-10">
           <p className="text-gray-600 text-sm">Not sure?</p>
-          <a
+          <Link to="/quizhome"
             href="#"
-            className="text-blue-600 text-sm font-medium hover:underline inline-flex items-center gap-1"
-          >
+            className="text-blue-600 text-sm font-medium hover:underline inline-flex items-center gap-1">
+          
             Take the Shoe Finder Quiz →
-          </a>
+         </Link>
         </div>
       </div>
     </div>

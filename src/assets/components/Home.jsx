@@ -111,13 +111,13 @@ const pictures=[
         </div>
 
         {/* Quote Section */}
-        <div className="bg-gray-100 rounded-2xl mt-12 md:mt-16 p-6 md:p-10 text-center">
-          <div className="text-xl md:text-4xl font-DMSerif max-w-3xl mx-auto mb-6">
+        <div className="bg-gray-100 rounded-2xl mt-12 md:mt-20 p-6   md:p-10 text-center">
+          <div className="text-xl md:text-4xl  font-DMSerif max-w-3xl mx-auto mb-10">
             "These are the most thoughtfully designed sneakers on the market."
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-20">
-            <span className="font-DMSerif text-3xl md:text-5xl">VOGUE</span>
-            <span className="font-DMSerif text-gray-500 text-3xl md:text-5xl">esquire</span>
+            <span className="font-DMSerif text-3xl md:text-6xl">VOGUE</span>
+            <span className="font-DMSerif text-gray-500 text-3xl md:text-6xl">esquire</span>
             <span className="font-medium text-sm md:text-md text-gray-400 leading-4">
               HUMANS OF NEWYORK
             </span>
@@ -160,7 +160,7 @@ const pictures=[
 
           {/* Bottom Button */}
           <div className="flex justify-center mt-10">
-            <button className="bg-lime-300 text-black px-6 py-2 rounded-full font-medium hover:bg-lime-200 transition-colors duration-300">
+            <button className="bg-lime-300 text-black px-8 py-2 rounded-full font-medium hover:bg-lime-200 transition-colors duration-300">
               Shop Now
             </button>
           </div>
@@ -224,7 +224,7 @@ const pictures=[
         <div className="font-semibold">Model 2001</div>
         <div className="text-xs text-gray-500">Navy</div>
       </div>
-      <button className="bg-lime-300 px-4 sm:px-6 py-2 sm:py-3 rounded-3xl font-medium hover:cursor-pointer">
+      <button className="bg-lime-300 px-4 sm:px-8 py-2 sm:py-3 rounded-3xl font-medium hover:cursor-pointer">
         Shop Now
       </button>
     </div>
