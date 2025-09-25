@@ -28,7 +28,7 @@ const Accessories = ({ isOpen, onClose }) => {
             <img
               src="/images/acc1.jpg"
               alt="Model 000"
-              className="rounded-lg  object-cover w-30 h-40 md:w-50 md:h-60"
+              className="rounded-lg   object-fit w-50 h-40 md:w-50 md:h-60"
             />
             <button onClick={()=>{Navigate(`/add-to-bag/11`);onClose()}} className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 000
@@ -41,7 +41,7 @@ const Accessories = ({ isOpen, onClose }) => {
             <img
               src="/images/mask.jpg"
               alt="Model 001"
-              className="rounded-lg  object-cover w-30 h-40 md:w-50 md:h-60"
+              className="rounded-lg   object-fit w-50 h-40 md:w-50 md:h-60"
             />
             <button onClick={()=>{Navigate(`/add-to-bag/12`);onClose()}} className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 001

@@ -25,7 +25,7 @@ const Men = ({ isOpen, onClose }) => {
             <img
               src="/images/men1.jpg"
               alt="Model 000"
-              className="rounded-lg  object-cover w-30 h-40 md:w-50 md:h-60"
+              className="rounded-lg  object-fill w-50  h-40 md:w-50 md:h-60"
             />
             <button onClick={()=>{navigate(`/add-to-bag/8`);onClose()}} className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 000
@@ -38,7 +38,7 @@ const Men = ({ isOpen, onClose }) => {
             <img
               src="/images/men2.jpg"
               alt="Model 001"
-              className="rounded-lg  object-cover w-30 h-40 md:w-50 md:h-60"
+              className="rounded-lg  object-fit w-50 h-40 md:w-50 md:h-60"
             />
             <button onClick={()=>{navigate(`/add-to-bag/7`); onClose()}} className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 001

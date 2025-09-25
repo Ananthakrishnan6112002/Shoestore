@@ -2,8 +2,8 @@ import React from 'react'
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 const Footer = () => {
   return (
-     <footer className="bg-[#0b0b22] text-white py-12 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+     <footer className="bg-[#0b0b22]  text-white py-12 px-10 md:px-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
 
         {/* Left Section - Logo & Newsletter */}
         <div>
@@ -18,7 +18,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter email here for updates"
-              className="w-full md:w-60 px-6 py-2 bg-transparent border text-white placeholder:text-white border-gray-100 rounded-4xl text-sm focus:outline-none focus:border-white"
+              className="w-40 md:w-30 xl:w-60 px-6 py-2 bg-transparent border text-white placeholder:text-white border-gray-100 rounded-4xl text-sm focus:outline-none focus:border-white"
             />
           </div>
         </div>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
           {/* Social Icons */}
-        <div className="mt-15 text-base flex flex-col gap-4 ">
+        <div className="mt-15 text-base flex flex-col gap-4 md:ml-0 ">
   <a href="#" className="flex items-center gap-2 hover:text-gray-400">
     <FaTwitter /> Twitter
   </a>

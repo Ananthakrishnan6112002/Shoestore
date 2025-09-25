@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { FaStar } from "react-icons/fa";
-import { useState, useContext } from 'react'
+import { useState, useContext,useEffect } from 'react'
 import { useNavigate,useNavigation,useParams } from "react-router-dom";
 import Slideshow from './Slideshow';
 import Rating from './Rating';
@@ -9,10 +9,6 @@ import viteLogo from '/vite.svg'
 import Footer from './Footer';
 import Cart from './Cart';
 import { CartContext } from "./CartContext"; //
-
-
-
-
 
 const Addtobag = ({products}) => {
     const navigate=useNavigate();
@@ -24,6 +20,9 @@ const Addtobag = ({products}) => {
   const [size, setSize] = useState("US 9");
   const [isCartOpen, setIsCartOpen] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   const onbag=(product)=>{
       addToCart(product); //

@@ -32,7 +32,7 @@ const Cart = ({isOpen,onClose}) => {
 
   return (
     <div
-      className={`fixed overflow-y-auto top-0 right-0 w-1/3 max-w-5xl border-l-green-300
+      className={`fixed overflow-y-auto top-0 right-0 w-full md:w-1/3 max-w-5xl border-l-green-300
          border-l-2 md:max-w-full h-full z-50 flex  justify-center items-start  bg-opacity-50 transition-opacity duration-500
         ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
     >

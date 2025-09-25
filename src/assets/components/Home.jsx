@@ -111,15 +111,15 @@ const pictures=[
         </div>
 
         {/* Quote Section */}
-        <div className="bg-gray-100 rounded-2xl mt-12 md:mt-20 p-6   md:p-10 text-center">
+        <div className="bg-gray-100 rounded-2xl mt-12 md:mt-26 p-6 mb-10  md:p-10 text-center">
           <div className="text-xl md:text-4xl  font-DMSerif max-w-3xl mx-auto mb-10">
             "These are the most thoughtfully designed sneakers on the market."
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-20">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-40">
             <span className="font-DMSerif text-3xl md:text-6xl">VOGUE</span>
             <span className="font-DMSerif text-gray-500 text-3xl md:text-6xl">esquire</span>
-            <span className="font-medium text-sm md:text-md text-gray-400 leading-4">
-              HUMANS OF NEWYORK
+            <span className="font-medium tracking-wider text-center text-sm md:text-md text-gray-400 leading-4">
+              HUMANS <span>OF</span><br/> NEWYORK
             </span>
           </div>
         </div>
@@ -131,7 +131,7 @@ const pictures=[
             <h2 className="text-lg md:text-xl font-bold">Explore Model 000</h2>
             <a
               href="#"
-              className="text-sm font-medium text-gray-700 hover:underline"
+              className="text-sm font-medium underline text-gray-700 hover:underline"
             >
               Shop Now
             </a>
@@ -142,7 +142,7 @@ const pictures=[
             {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-xl shadow-sm p-4 flex flex-col hover:scale-110 transform transition-transform duration-150 items-center hover:shadow-lg "
+                className="bg-white rounded-xl shadow-sm  flex flex-col hover:scale-110 transform transition-transform duration-150 items-center hover:shadow-lg "
               >
                 <img
                   src={product.img}
@@ -181,8 +181,8 @@ const pictures=[
       />
 
       {/* Text + Stars */}
-      <div className="flex flex-col px-4 mt-4 md:mt-0 md:pl-8 ">
-        <div className="flex items-center space-x-1">
+      <div className="flex flex-col px-4 mt-4 md:mt-18 md:pl-8 ">
+        <div className="flex items-center ml-26 space-x-1">
           <span className="text-sm">borkat u.</span>
           {[...Array(5)].map((_, i) => (
             <svg
@@ -234,16 +234,16 @@ const pictures=[
 
  
       </div>
-      <div className="bg-[#03031a] min-h-screen text-white font-sans mt-14">
+      <div className="bg-[#03031a] min-h-screen md:mt-20 text-white font-sans mt-14">
       {/* Navbar */}
-      <div className="flex justify-center py-4">
-        <button className="bg-white text-black px-4 py-1 rounded-full text-sm">
+      <div className="flex justify-center  py-16">
+        <button className="bg-white text-black px-5 py-3 rounded-full text-sm">
           New
         </button>
       </div>
 
       {/* Title */}
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-6">
+      <h1 className="text-3xl md:text-6xl font-DMSerif tracking-wider  text-center mb-8">
         Introducing Model 001
       </h1>
 
@@ -252,7 +252,7 @@ const pictures=[
         <img
           src="/images/ad.jpg"
           alt="Hero Shoe"
-          className="w-full max-w-3xl rounded-lg"
+          className="w-full max-w-[74rem] rounded-lg"
         />
       </div>
 
@@ -384,7 +384,7 @@ const pictures=[
       <div className="px-4 md:px-10 lg:px-40">
 <div className="bg-gray-50 min-h-screen  py-12 space-y-12">
       {/* Card 1 - SOPA */}
-      <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden hover:shadow-lg  transition-transform duration-200">
+      <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden hover:shadow-lg mb-24 mt-10 transition-transform duration-200">
         {/* Left Image */}
         <div className="flex items-center justify-center bg-white">
           <img
@@ -419,7 +419,7 @@ const pictures=[
       </div>
 
       {/* Card 2 - Humans of New Youk */}
-      <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden  hover:shadow-lg   transition-transform duration-200">
+      <div className="bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-3 overflow-hidden  hover:shadow-lg    transition-transform duration-200">
         {/* Left Image */}
         <div className="flex items-center justify-center bg-white">
           <img
@@ -449,14 +449,14 @@ const pictures=[
         </div>
       </div>
     </div>
-<div className='mt-10'>
+<div className='mt-14'>
   <div className='text-center'>
     <span className='font-DMSerif text-4xl font-semibold tracking-widest '> SOPA in Everyday </span>
     <div className='text-sm mt-3 '>@sopa</div>
   </div>
   
 </div>
-<div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-4 mt-8 object-cover sm:ml-0'>
+<div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mb-14 md:gap-4 mt-10 object-cover sm:ml-0'>
 {
   pictures.map((pict)=>(
     <img key={pict.id} src={pict.image} alt="" className='md:h-85 md:w-80 w-full rounded-2xl mb-3 hover:scale-105 transition-transform duration-200' />

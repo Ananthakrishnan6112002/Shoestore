@@ -15,6 +15,8 @@ import Navbar from "./assets/components/Navbar";
 import { CartProvider } from "./assets/components/CartContext"; // 👈 import provider
 import Login from "./assets/components/Login";
 import Signup from "./assets/components/Signup.jsx";
+import Allproducts from "./assets/components/Allproducts";
+
 function App() {
   return (
     <CartProvider>
@@ -29,6 +31,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/allproducts" element={<Allproducts products={products}/>}/>
         </Routes>
       </Router>
     </CartProvider>

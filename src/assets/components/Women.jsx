@@ -26,7 +26,7 @@ const Women = ({ isOpen, onClose }) => {
             <img
               src="/images/women1.jpg"
               alt="Model 000"
-              className="rounded-lg  object-cover  w-30 h-40 md:w-50 md:h-60"
+              className="rounded-lg  object-fit w-50 h-40 md:w-50 md:h-60"
             />
             <button onClick={()=>{navigate(`/add-to-bag/9`);onClose()}} className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 000
@@ -39,7 +39,7 @@ const Women = ({ isOpen, onClose }) => {
             <img
               src="/images/women2.jpg"
               alt="Model 001"
-              className="rounded-lg  object-cover w-30 h-40 md:w-50 md:h-60"
+              className="rounded-lg   object-fit w-50 h-40 md:w-50 md:h-60"
             />
             <button onClick={()=>{navigate(`/add-to-bag/10`),onClose()}} className="mt-4 px-6 py-2 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition">
               Model 001
