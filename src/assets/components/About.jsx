@@ -6,9 +6,9 @@ const About = () => {
   return (
     <div>
         <Navbar />
-        <section className="w-full bg-white px-4 md:px-12 lg:px-24 py-12">
+        <section className="w-full bg-white pr-4  md:px-12 lg:px-24 py-12">
       {/* Top Image with Play Button */}
-      <div className="relative w-full max-w-5xl mx-auto h-[450px]">
+      <div className="relative w-full max-w-5xl mx-auto  h-[450px]">
         <video autoPlay loop muted playsInline className='absolute top-8 left-2 w-full h-full object-cover'><source src="images/3205624-hd_1920_1080_25fps.mp4" type="video/mp4"/></video>
        
       </div>
@@ -16,7 +16,7 @@ const About = () => {
       {/* Content */}
       <div className="max-w-3xl mx-auto mt-10 text-center">
         <h2 className="font-DMSerif text-2xl md:text-3xl font-bold text-gray-900">
-          Why start another shoe company?
+          Why another shoe company?start 
         </h2>
         <p className="text-gray-900 mt-3">
           We are committed to making our shoes more sustainable.
